@@ -1,0 +1,10 @@
+SELECT
+	Gender, 
+	Age,
+	COUNT(Gender) AS Gender_count
+FROM
+	EmployeeDemographics
+GROUP BY
+	Gender, Age
+ORDER BY 
+	Age DESC
