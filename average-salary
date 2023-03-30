@@ -1,0 +1,13 @@
+-- Getting the average of the salary
+SELECT
+	JobTitle,
+	AVG(Salary) As Average_salary
+FROM
+	EmployeeDemographics
+INNER JOIN
+	EmployeeSalary
+ON 
+EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE
+	JobTitle = 'Salesman'
+GROUP BY JobTitle
